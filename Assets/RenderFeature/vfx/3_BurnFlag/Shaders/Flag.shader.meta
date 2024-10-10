@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 2ac69dc49e6cfe04a9ac52b9e13988fd
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _tex_flag1: {fileID: 2800000, guid: de5969b59a7d5db48b198da3aa63c061, type: 3}
+  - _Ramp01: {fileID: 2800000, guid: 8a534951f05fd3b4090322a1fbfc22e2, type: 3}
+  - _Tex_Pattern18A: {fileID: 2800000, guid: ad31f1ecccb001f4f8bd1912f488e400, type: 3}
+  - _Gradient09Clamped: {fileID: 2800000, guid: 3d3d31d40f23781468e114b1df589565, type: 3}
+  nonModifiableTextures: []
+  preprocessorOverride: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

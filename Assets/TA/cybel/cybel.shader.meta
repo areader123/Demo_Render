@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: ee4b49dda25e133408197a328d027efa
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _BaseMap: {fileID: 2800000, guid: 32346e5361d311d46abc91539c5de052, type: 3}
+  - _HeightMap: {fileID: 2800000, guid: 4b12c33eecf02dd4297bcd55b7f1f256, type: 3}
+  - _TextureSample0: {fileID: 2800000, guid: 2f550f176d175d748acba7857070cfe4, type: 3}
+  - _WaveNormal: {fileID: 2800000, guid: 40c4b04d51ea1784fbdfaf766558bb2e, type: 3}
+  - _DropRain: {fileID: 2800000, guid: 158fe70503ded4c4e9b74848f7129010, type: 3}
+  - _NormalMap: {fileID: 2800000, guid: 94e6514e6a52f284ab0fe0d8c7a7f320, type: 3}
+  - _RoughnessMap: {fileID: 2800000, guid: c61d480549801c2439b8838f32d732d8, type: 3}
+  - _AOMap: {fileID: 2800000, guid: 29e10138d3468b340a730fb1e5a62606, type: 3}
+  nonModifiableTextures: []
+  preprocessorOverride: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

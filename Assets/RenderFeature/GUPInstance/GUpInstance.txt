@@ -1,0 +1,30 @@
+四种GPUIntance方法
+1.使用computerBuffer
+2.使用MaterialPropertyBlock for循环多次为调用的gameobject的render的SetPropertyBlock
+    2.1着色器中
+            //！ Instance 定义属性
+            UNITY_INSTANCING_BUFFER_START(Props)
+            UNITY_DEFINE_INSTANCED_PROP(float4, _Color)
+            UNITY_INSTANCING_BUFFER_END(Props)
+
+            v2f vert(appdata v)
+            {
+                v2f o;
+            //！    UNITY_SETUP_INSTANCE_ID(v);
+                UNITY_TRANSFER_INSTANCE_ID(v, o); // 只有当你想要访问片段着色器中的实例属性时才需要。
+
+                o.vertex = UnityObjectToClipPos(v.vertex);
+                return o;
+            }
+
+            fixed4 frag(v2f i) : SV_Target
+            {
+            //！    UNITY_SETUP_INSTANCE_ID(i); // 只有当你想要访问片段着色器中的实例属性时才需要。
+                return UNITY_ACCESS_INSTANCED_PROP(Props, _Color);
+                // return _Color;//为Properties的属性
+            }
+
+    //避免打断批处理
+3. 使用在Update()中调用Graphics.DrawMeshInstanced(instanceMesh, 0, instanceMaterial, matrix4x4s, matrix4x4s.Length);
+4. Graphics.DrawMeshInstancedProcedural(instanceMesh, 0, instanceMaterial, new Bounds(Vector3.zero, new Vector3(radius, radius, radius)), instanceCount);
+与 computerBuffer(存贮变换矩阵)

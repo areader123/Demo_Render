@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: 77287605a4cf71d46a772034b9145325
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _New_Graph_basecolor: {fileID: 2800000, guid: 1ec709927c3ab1b47835f3c9954ddd3e, type: 3}
+  nonModifiableTextures: []
+  preprocessorOverride: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

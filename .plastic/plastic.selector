@@ -1,0 +1,4 @@
+repository "URP模板@wechat_os_qy0xwsaln9jlrziyll0xkmgso@cloud.cn"
+  path "/"
+    br "/main"
+    co "/main"
