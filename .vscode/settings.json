@@ -52,5 +52,5 @@
         "Temp/": true
     },
     "dotnet.preferCSharpExtension": true,
-    "dotnet.defaultSolution": "URP模板.sln"
+    "dotnet.defaultSolution": "Demo_Render.sln"
 }
