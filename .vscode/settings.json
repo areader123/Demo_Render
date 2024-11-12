@@ -52,5 +52,6 @@
         "Temp/": true
     },
     "dotnet.preferCSharpExtension": true,
-    "dotnet.defaultSolution": "Demo_Render.sln"
+    "dotnet.defaultSolution": "Demo_Render.sln",
+    "FSharp.suggestGitignore": false
 }

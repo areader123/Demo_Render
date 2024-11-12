@@ -115,7 +115,7 @@ Material:
     - _Alpha: 1
     - _AlphaClip: 1
     - _BumpScale: 1
-    - _Colorintensity: 3
+    - _Colorintensity: 2.92
     - _Cull: 2
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1

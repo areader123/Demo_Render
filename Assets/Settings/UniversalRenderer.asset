@@ -260,7 +260,7 @@ MonoBehaviour:
       RenderQueueType: 0
       LayerMask:
         serializedVersion: 2
-        m_Bits: 256
+        m_Bits: 4294967295
       PassNames:
       - Hair_Second
     overrideMaterial: {fileID: 0}
@@ -396,7 +396,7 @@ MonoBehaviour:
       RenderQueueType: 0
       LayerMask:
         serializedVersion: 2
-        m_Bits: 256
+        m_Bits: 4294967295
       PassNames:
       - "GF_\u7709\u6BDB"
     overrideMaterial: {fileID: 0}
@@ -476,7 +476,7 @@ MonoBehaviour:
       RenderQueueType: 0
       LayerMask:
         serializedVersion: 2
-        m_Bits: 256
+        m_Bits: 4294967295
       PassNames:
       - Hair_FIrst
       - Hair_Second

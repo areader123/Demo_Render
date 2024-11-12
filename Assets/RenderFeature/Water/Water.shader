@@ -1,4 +1,4 @@
-Shader "Unlit/Water"
+Shader "Sea/Water"
 {
     Properties
     {
@@ -64,12 +64,13 @@ Shader "Unlit/Water"
     }
     SubShader
     {
-        Tags { "Queue"="Transparent" "RenderType"="Opaque" }
+        Tags {"Queue"="Transparent" "RenderType"="Opaque" }
         LOD 100
 
         Pass
         {
-            ZWrite Off
+            ZWrite On
+            Cull Off
             HLSLPROGRAM
             #pragma vertex vert
             #pragma fragment frag
@@ -283,8 +284,8 @@ Shader "Unlit/Water"
                 float2  samplerUV =  noiseUV + float2(distortSample.x,distortSample.y);
                 half distortNoise = tex2D(_EdgeFoamNoise, worldPos.xz / _NoiseScale + samplerUV).r;
                 float edgeFoamMask = smoothstep(0, _EdgeFoamDepth, waterDepthDifference01);
-                //edgeFoamMask = saturate(0.5+sin(( _Time.y * _EdgeSpeed) * PI * _EdgeAmount)) * edgeFoamMask;
-                float edgeFoam = smoothstep(edgeFoamMask-0.05,edgeFoamMask + 0.05,distortNoise);
+                edgeFoamMask = saturate(0.5+sin(( _Time.y * _EdgeSpeed) * PI * _EdgeAmount)) *(1-edgeFoamMask);
+                float edgeFoam = smoothstep((1-edgeFoamMask)-0.05,(1-edgeFoamMask) + 0.05,distortNoise);
                 float4 edgeFoamColor = lerp(0, _EdgeFoamColor, edgeFoam);
                 //浪尖泡沫
                 half foamNoise = tex2D(_FoamNoiseMap,worldPos.xz / _FoamNoiseScale + samplerUV).r;
@@ -293,7 +294,10 @@ Shader "Unlit/Water"
                 half4 WavefoamColor = foam * _FoamColor;
                 //foam仅为遮罩
                 //此处可以有浪尖tex
-                //return  (1-foam);
+               // return distortNoise;
+                //return edgeFoam;
+               //return saturate(0.5+sin(( _Time.y * _EdgeSpeed) * PI * _EdgeAmount));
+               // return  WavefoamColor;
 
                 //焦散
                 float3 viewDirTS = TransformWorldToTangent(viewDir,tbn);
@@ -334,7 +338,7 @@ Shader "Unlit/Water"
 
                 float3 reflDir = reflect(-viewDir,normal);
                 //reflDir = reflect(-viewDir,float3(0,0,1));
-                float3 reflCol =  SAMPLE_TEXTURECUBE(unity_SpecCube0 ,sampler_unity_SpecCube0, float3(reflDir) ).rgb ;
+                float3 reflCol =  SAMPLE_TEXTURECUBE(unity_SpecCube0 ,sampler_unity_SpecCube0, float3(reflDir)).rgb ;
                 //   return float4(reflCol,1);
                 half fresnel = pow(1 - saturate(dot(viewDir,float3(0,1,0))),_FresnelPower);
                 //return fresnel;
@@ -356,6 +360,23 @@ Shader "Unlit/Water"
                 //return foam;
                 return float4(finalColor,1);
             }   
+            ENDHLSL
+        }
+
+
+        Pass {
+            Name "DepthOnly"
+        
+            Tags {
+                "LightMode" = "DepthOnly"
+            }
+        
+            HLSLPROGRAM
+            #include "Packages/com.unity.render-pipelines.universal/Shaders/LitInput.hlsl"
+            #include "Packages/com.unity.render-pipelines.universal/Shaders/DepthOnlyPass.hlsl"
+        
+            #pragma vertex DepthOnlyVertex
+            #pragma fragment DepthOnlyFragment
             ENDHLSL
         }
     }

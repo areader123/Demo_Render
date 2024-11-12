@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
-//创造两个平面 渲染到这两个平面所在的深度 
+////创造两个平面 渲染到这两个平面所在的深度 
 //利用另一个摄像机的高度图 确定当前点是否存在物体遮挡 由此决定近平面是否渲染出来 
 //来模拟雨水被遮挡的效果
 namespace LcLgame
@@ -123,7 +123,7 @@ namespace LcLgame
                     new Vector4(layerFar.depthBase, layerFar.depthRange, layerFar.threshold, layerFar.smoothness));
 
                 var xform = Matrix4x4.TRS(camera.transform.position, Quaternion.Euler(m_RainSettings.windDir),
-                    Vector3.one * m_RainSettings.meshScale);
+                    Vector3.one * m_RainSettings.meshScale);//渲染在摄像机上
                     
                 cmd.DrawMesh(m_RainSettings.rainMesh, xform, m_Material);
             }

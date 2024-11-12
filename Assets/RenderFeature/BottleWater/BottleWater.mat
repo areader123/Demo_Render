@@ -111,7 +111,7 @@ Material:
     - _SrcBlend: 1
     - _Surface: 0
     - _Threshold: 1
-    - _WobbleX: -1.5454329e-13
+    - _WobbleX: -0.0036847969
     - _WobbleZ: NaN
     - _WorkflowMode: 1
     - _ZWrite: 1

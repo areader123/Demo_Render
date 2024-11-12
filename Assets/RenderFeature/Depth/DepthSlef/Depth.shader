@@ -1,4 +1,4 @@
-Shader "Unlit/Depth"
+Shader "Sea/Depth"
 {
     Properties
     {
@@ -31,7 +31,7 @@ Shader "Unlit/Depth"
                 float viewSpaceDepth : TEXCOORD1;
             };
 
-          
+            
 
             v2f vert (appdata v)
             {
