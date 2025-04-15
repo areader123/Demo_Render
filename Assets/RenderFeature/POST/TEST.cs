@@ -44,7 +44,7 @@ public class TEST : ScriptableRendererFeature
             
             var stack = VolumeManager.instance.stack;
             mvc = stack.GetComponent<Voloum>();
-
+          
             CommandBuffer cmd = CommandBufferPool.Get();
             cmd.name = "test pass";//这里可以在FrameDebugger里看到我们pass的名字
             

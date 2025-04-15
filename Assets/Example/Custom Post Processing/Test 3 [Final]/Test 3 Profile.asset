@@ -1,0 +1,254 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9005063968450440511
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70927802dd522564db589369e75cf094, type: 3}
+  m_Name: BlurVolumeComponent
+  m_EditorClassIdentifier: 
+  active: 1
+  m_DownSample:
+    m_OverrideState: 0
+    m_Value: 2
+  m_Iteration:
+    m_OverrideState: 0
+    m_Value: 2
+  m_BlurRadius:
+    m_OverrideState: 0
+    m_Value: 2
+--- !u!114 &-8999767446184962773
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07c11592d6e04bc48bf27c9634d37416, type: 3}
+  m_Name: HSV
+  m_EditorClassIdentifier: 
+  active: 1
+  m_InjectionPoint:
+    m_OverrideState: 1
+    m_Value: 1
+  m_OrderInPass:
+    m_OverrideState: 1
+    m_Value: 1
+  m_Shader:
+    m_OverrideState: 1
+    m_Value: {fileID: 4800000, guid: e2b2bcd97eaf6fd47a0df3006a44ecdd, type: 3}
+  m_Iteration:
+    m_OverrideState: 1
+    m_Value: 1
+  m_Brightness:
+    m_OverrideState: 1
+    m_Value: 0.5
+  m_Saturate:
+    m_OverrideState: 1
+    m_Value: 0.5
+  m_Contranst:
+    m_OverrideState: 1
+    m_Value: 0.5
+--- !u!114 &-7164183978321989400
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: BlurVolumeComponent
+  m_EditorClassIdentifier: Assembly-CSharp::BlurVolumeComponent
+  active: 1
+  blurRadius:
+    m_OverrideState: 1
+    m_Value: 8.75
+  iteration:
+    m_OverrideState: 1
+    m_Value: 2
+  downSample:
+    m_OverrideState: 1
+    m_Value: 6
+--- !u!114 &-6390765501264893383
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5a22b2dbb13edc49bbdd08216534559, type: 3}
+  m_Name: Blur
+  m_EditorClassIdentifier: 
+  active: 1
+  m_InjectionPoint:
+    m_OverrideState: 1
+    m_Value: 1
+  m_OrderInPass:
+    m_OverrideState: 1
+    m_Value: 2
+  m_Shader:
+    m_OverrideState: 1
+    m_Value: {fileID: 4800000, guid: 57650cfceea622e4fa72aaf4deb72232, type: 3}
+  m_Iteration:
+    m_OverrideState: 1
+    m_Value: 2
+  blurRadius:
+    m_OverrideState: 1
+    m_Value: 8
+--- !u!114 &-291193123292128179
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70afe9e12c7a7ed47911bb608a23a8ff, type: 3}
+  m_Name: SplitToning
+  m_EditorClassIdentifier: 
+  active: 1
+  shadows:
+    m_OverrideState: 1
+    m_Value: {r: 1, g: 0, b: 0, a: 1}
+  highlights:
+    m_OverrideState: 1
+    m_Value: {r: 0, g: 1, b: 0.033620358, a: 1}
+  balance:
+    m_OverrideState: 1
+    m_Value: 7
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7fd9488000d3734a9e00ee676215985, type: 3}
+  m_Name: Test 3 Profile
+  m_EditorClassIdentifier: 
+  components:
+  - {fileID: 5936520525610113449}
+  - {fileID: -291193123292128179}
+  - {fileID: 2028467856713080268}
+  - {fileID: -8999767446184962773}
+  - {fileID: -6390765501264893383}
+--- !u!114 &2028467856713080268
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a27c5247054318478e6a096f55b1534, type: 3}
+  m_Name: InverseColor
+  m_EditorClassIdentifier: 
+  active: 1
+  m_InjectionPoint:
+    m_OverrideState: 1
+    m_Value: 1
+  m_OrderInPass:
+    m_OverrideState: 1
+    m_Value: 3
+  m_Shader:
+    m_OverrideState: 1
+    m_Value: {fileID: 4800000, guid: 22e571b1e797b174fae58c8ba7054ef9, type: 3}
+  m_Iteration:
+    m_OverrideState: 1
+    m_Value: 1
+--- !u!114 &5936520525610113449
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 899c54efeace73346a0a16faa3afe726, type: 3}
+  m_Name: Vignette
+  m_EditorClassIdentifier: 
+  active: 1
+  color:
+    m_OverrideState: 1
+    m_Value: {r: 0, g: 0, b: 0, a: 1}
+  center:
+    m_OverrideState: 1
+    m_Value: {x: 0.5, y: 0.5}
+  intensity:
+    m_OverrideState: 1
+    m_Value: 0.447
+  smoothness:
+    m_OverrideState: 1
+    m_Value: 0.607
+  rounded:
+    m_OverrideState: 0
+    m_Value: 0
+--- !u!114 &6515782391186792008
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5a22b2dbb13edc49bbdd08216534559, type: 3}
+  m_Name: BlurVolumeComponent
+  m_EditorClassIdentifier: 
+  active: 1
+  m_InjectionPoint:
+    m_OverrideState: 1
+    m_Value: 1
+  m_OrderInPass:
+    m_OverrideState: 1
+    m_Value: 2
+  m_Shader:
+    m_OverrideState: 1
+    m_Value: {fileID: 4800000, guid: 57650cfceea622e4fa72aaf4deb72232, type: 3}
+  m_Iteration:
+    m_OverrideState: 1
+    m_Value: 1
+  blurRadius:
+    m_OverrideState: 1
+    m_Value: 8
+--- !u!114 &7718736935220361007
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a27c5247054318478e6a096f55b1534, type: 3}
+  m_Name: InverseColorVolumeComponent
+  m_EditorClassIdentifier: 
+  active: 1
+  m_InjectionPoint:
+    m_OverrideState: 1
+    m_Value: 0
+  m_OrderInPass:
+    m_OverrideState: 1
+    m_Value: 1
+  m_Shader:
+    m_OverrideState: 1
+    m_Value: {fileID: 4800000, guid: 22e571b1e797b174fae58c8ba7054ef9, type: 3}
+  m_Iteration:
+    m_OverrideState: 1
+    m_Value: 1

@@ -70,7 +70,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EdgeFoamNoise:
-        m_Texture: {fileID: 2800000, guid: 5816d78c683f91e40b7736a2eaddb596, type: 3}
+        m_Texture: {fileID: 2800000, guid: 270a05aed0caf064aaa9a2ea29e3ab0f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
@@ -153,7 +153,7 @@ Material:
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Metallic: 0
-    - _NoiseScale: 4.45
+    - _NoiseScale: 174.24
     - _NormalScale: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.005
@@ -177,7 +177,7 @@ Material:
     - _Wave2Direction: 0.91
     - _Wave2Speed: 1.25
     - _Wave2Wavelength: 5.93
-    - _WaveControl: 1.55
+    - _WaveControl: 2
     - _WaveXSpeed: 0.00031
     - _WaveYSpeed: 0.03
     - _WorkflowMode: 1
@@ -188,7 +188,7 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DeepColor: {r: 0.23629406, g: 0.36477655, b: 0.8490566, a: 1}
-    - _EdgeFoamColor: {r: 1, g: 1, b: 1, a: 1}
+    - _EdgeFoamColor: {r: 0.8584906, g: 0.8584906, b: 0.8584906, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FarColor: {r: 0, g: 0.21276593, b: 1, a: 1}
     - _FoamColor: {r: 0.066037714, g: 0.066037714, b: 0.066037714, a: 1}

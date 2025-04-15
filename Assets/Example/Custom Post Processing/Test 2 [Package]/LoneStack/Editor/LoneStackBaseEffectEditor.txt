@@ -1,0 +1,25 @@
+using UnityEngine;
+using UnityEditor;
+using LoneStack;
+using ZUI;
+
+[CustomEditor(typeof(##NameMinusEditor##), true)]
+public class ##Name## : LSEffectEditor
+{
+    //SerializedProperty prop_myProperty;
+
+    public override void OnInspectorGUI()
+    {
+        serializedObject.Update();
+        
+        //EditorGUILayout.PropertyField(prop_myProperty);
+        
+        serializedObject.ApplyModifiedProperties();
+    }
+
+    protected override void OnEnable()
+    {
+        base.OnEnable();
+        //prop_myProperty = Settings.FindPropertyRelative("myProperty"); // <= access your effect's properties settings like such.
+    }
+}

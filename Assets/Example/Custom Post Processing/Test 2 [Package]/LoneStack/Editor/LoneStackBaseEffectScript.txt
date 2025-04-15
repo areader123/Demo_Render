@@ -1,0 +1,35 @@
+using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
+using LoneStack;
+
+[System.Serializable]
+public class ##Name##Settings : LSEffectSettings
+{
+    // Every serializeable properties here will be exposed settings
+}
+
+[LSEffectPath("Custom/##Name##")]
+public class ##Name## : LSEffect<##Name##Settings>
+{
+    public override float Blend { set { /* You can set the blend as shader parameter here for example */ } }
+
+    protected override void Awake()
+    {
+        // Setup your effect here
+    }
+
+    public override void EnqueueToBuffer(CommandBuffer cmdBuffer, LSContext context, ref RenderingData renderingData)
+    {
+        // Executes once per render (there may be more or less than one render per frame)
+        // Set your render-specific effect / shader parameters by accessing your effect's settings
+        // and populate the command buffer
+        cmdBuffer.Blit(context.source, context.destination);
+    }
+
+    public override void Update()
+    {
+        // Executes once per frame
+        // useful for logic which is common to all renders but varies over time
+    }
+}

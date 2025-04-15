@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" addBOMForNewFiles="with BOM under Windows, with no BOM otherwise">
+    <file url="file://$PROJECT_DIR$/Assets/Example/Custom Post Processing/Test 0 [Basic]/CPPMode3VolumeComponent.cs" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Assets/Example/Custom Post Processing/Test 0 [Basic]/CPP_Mode1.cs" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Assets/Example/Custom Post Processing/Test 0 [Basic]/CPP_Mode2.cs" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Assets/Terrain/Water 1 &amp; 2/WaveWater/Shaders/VertexWaveNormal.shader" charset="GBK" />
+  </component>
+</project>
